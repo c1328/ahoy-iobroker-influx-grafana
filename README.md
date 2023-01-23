@@ -21,7 +21,7 @@ Warning: The connection Ahoy-DTU -> ioBroker (MQTT Broker/Client Adapter) is cur
 * ensure having an influxDB (version 1.x) connected to your ioBroker environment.
 * choose your desired datapoints to be stored in a influxDB by click on the custom settings wheel at the right and activate influxDB: <img width="809" alt="image" src="https://user-images.githubusercontent.com/112856305/214141448-92813295-61c5-49fe-ac83-59cf1b7ce8c4.png">
 * ensure that you setup the same influxDB as data-source in your Grafana installation.
-* import the JSON file of this repo.... Important: This JSON contains my individual dashboard. It might be needed to adjust it to your needs. There are also some "historical" queries because I switched from a *Inverter -> Ahoy-DTU -> MQTT (mosquitto) -> Telegraf -> InfluxDB -> Grafana* architecture, plesae checkout here: https://github.com/c1328/ahoy-mosquitto-telegraf-influx-grafana
+* import the JSON file of this repo.... Important: This JSON contains my individual dashboard. It might be needed to adjust it to your needs. There are also some "historical" queries because I switched from a _Inverter -> Ahoy-DTU -> MQTT (mosquitto) -> Telegraf -> InfluxDB -> Grafana_ architecture to the one with ioBroker, plesae checkout here the former solution: https://github.com/c1328/ahoy-mosquitto-telegraf-influx-grafana
 
 
 Enjoy dashboard and producing energy (dashboard is currenly configured for one inverter and two panels east/west - please adjust to your needs)
