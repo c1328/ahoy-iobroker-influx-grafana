@@ -27,9 +27,9 @@ Warning: The connection Ahoy-DTU -> ioBroker (MQTT Broker/Client Adapter) is cur
 Enjoy dashboard and producing energy (dashboard is currenly configured for one inverter and two panels east/west - please adjust to your needs)
 
 Dashboard variables:
-kwhPrice: Define your individual price of a kWh to calculate your potential daily savings - in case you consumed all of your produced energy.
-ahoyTopic: currenly not in use
-ahoyInvertername: currenly not in use
+* kwhPrice: Define your individual price of a kWh to calculate your potential daily savings - in case you consumed all of your produced energy.
+* ahoyTopic: currenly not in use
+* ahoyInvertername: currenly not in use
 
 
 ### Option "weather":
