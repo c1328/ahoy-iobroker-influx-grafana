@@ -1,15 +1,20 @@
 # ahoy-iobroker-influx-grafana
 AHOY-DTU (https://github.com/grindylow/ahoy) delivers power metrics from inverter via MQTT to ioBroker. Your ioBroker writes this data to InfluxDB. The Grafana dashboard consumes data from InfluxDB. This is the successor of the former solution https://github.com/c1328/ahoy-mosquitto-telegraf-influx-grafana
 
+<img width="994" alt="image" src="https://user-images.githubusercontent.com/112856305/226133633-a1ee4220-c4a3-44ce-80e9-038108604e26.png">
+
+
 ## Architecture:
 (Hoymiles-)Inverter -> Ahoy-DTU -> ioBroker (MQTT Broker/Client Adapter) -> InfluxDB 2.x -> Grafana
 
 Warning: The connection Ahoy-DTU -> ioBroker (MQTT Broker/Client Adapter) is currently insecure (no SSL available).
 
-**Dashboard content are three sections:**
+**Dashboard has five sections:**
 1. Overview: Main power metrics from Ahoy-DTU, Shelly power consumption, Cloudiness (forecast), daily production of last month
-2. Details: Some inverter metrics like power limit, irridation details of your panels, weekly production of last 20 weeks
-3. Balance: Ahoy-DTU power vs. Shelly power consumtion
+2. Production history by day and by week
+3. Ahoy-DTU details like uptime and MQTT status
+4. Details: Some inverter metrics like power limit, irridation details of your panels. This section repeats for each inverter you have.
+5. Balance: Ahoy-DTU power vs. Shelly power consumtion
 
 
 ## Prerequisites/Installation:
