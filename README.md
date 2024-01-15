@@ -21,7 +21,7 @@ Warning: The connection Ahoy-DTU -> ioBroker (MQTT Broker/Client Adapter) is cur
 * Ahoy-DTU with configured MQTT broker/server (topic will be "ahoy-dtu" and name of inverter 0 will be "Hoymiles1")
 * ioBroker has MQTT Broker/Client Adapter installed and instanced with default settings (listening on port 1883; SSL is not supported by Ahoy-DTU yet)
 * with the first connection og Ahoy-DTU to ioBroker all objects are created as shown: <img width="793" alt="image" src="https://user-images.githubusercontent.com/112856305/214140268-28008102-92be-45ea-9ff3-3d1d1c36e1e6.png">
-* if you want to set power limits via your ioBroker later you have to create "ctrl" datapoints manually with MQTT explorer (http://mqtt-explorer.com), I only created the nonpersistent ones: <img width="738" alt="image" src="https://user-images.githubusercontent.com/112856305/214140843-5a8fd3dc-4549-4a01-a401-8266bcf3d96f.png">
+* (this step is not needed for latest version of Ahoy) if you want to set power limits via your ioBroker later you have to create "ctrl" datapoints manually with MQTT explorer (http://mqtt-explorer.com), I only created the nonpersistent ones: <img width="738" alt="image" src="https://user-images.githubusercontent.com/112856305/214140843-5a8fd3dc-4549-4a01-a401-8266bcf3d96f.png">
 * Please check https://github.com/lumapu/ahoy/blob/main/User_Manual.md accordingly and how to control your inverter via MQTT messages.
 * ensure having an influxDB (version 2.x) connected to your ioBroker environment (in an former version I used Influx 1.x, you can find the latest dashboard version but it will no longer maintained by me).
 * choose your desired datapoints to be stored in a influxDB by click on the custom settings wheel at the right and activate influxDB: <img width="1276" alt="image" src="https://user-images.githubusercontent.com/112856305/214613343-451e5a54-6fae-40a7-8f19-bc4dee00162d.png">
@@ -44,7 +44,7 @@ I added some weather metrics to the dashboard (e.g. cloudiness of the region my 
 * choose desired metrics and write them to your influxDB, e.g. "clouds": ![image](https://user-images.githubusercontent.com/112856305/214143783-54f45b39-440f-49d2-a16d-6ecb37b325f1.png)
 
 ### Option "power consumption":
-I added some shelly metrics to the dashboard (e.g. power) to have a balance chart that shows production vs. consumption. I have only some shelly plugs to measure my consumption but thats fine so far. If you have any better data source (Shelly EM3 or direct access to your "Stromzähler" please change accordingly):
+I added some shelly metrics to the dashboard (e.g. power) to have a balance chart that shows production vs. consumption. I have only some shelly plugs to measure my consumption but thats fine so far. If you have any better data source (Shelly EM3 or direct access to your smart meter please change accordingly):
 * add and configure the Shelly adapter to you ioBroker
 * choose desired metrics and write them to your influxDB, e.g. "Power"
 * configure your transform of the consumption panel: <img width="748" alt="image" src="https://user-images.githubusercontent.com/112856305/214150172-04008fa0-0042-4270-8528-fed43083a336.png">
